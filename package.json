@@ -7,8 +7,6 @@
     "css",
     "esbuild"
   ],
-  "template": "node",
-  "type": "module",
   "version": "0.0.0",
   "main": "src/index.ts",
   "author": "SEEK",

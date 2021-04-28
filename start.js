@@ -6,6 +6,7 @@ import { serve } from 'esbuild';
 
 const entry = './src/index.ts';
 const outdir = path.join(process.cwd(), 'dist');
+const port = process.env.PORT || 8080;
 
 async function run() {
   if (existsSync(outdir)) {
@@ -15,7 +16,7 @@ async function run() {
   await fs.mkdir(outdir);
 
   await serve(
-    { servedir: outdir, port: 8080 },
+    { servedir: outdir, port },
     {
       entryPoints: [entry],
       platform: 'browser',
@@ -41,7 +42,7 @@ async function run() {
       </html>
     `,
   );
-  console.log('http://localhost:8080');
+  console.log(`http://localhost:${port}`);
 }
 
 run();
