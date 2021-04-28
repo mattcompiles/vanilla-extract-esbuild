@@ -1,8 +1,8 @@
-import path from 'path';
-import { existsSync, promises as fs } from 'fs';
+const path = require('path');
+const { existsSync, promises: fs } = require('fs');
 
-import { vanillaExtractPlugin } from '@vanilla-extract/esbuild-plugin';
-import { serve } from 'esbuild';
+const { vanillaExtractPlugin } = require('@vanilla-extract/esbuild-plugin');
+const { serve } = require('esbuild');
 
 const entry = './src/index.ts';
 const outdir = path.join(process.cwd(), 'dist');
