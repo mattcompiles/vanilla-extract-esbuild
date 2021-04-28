@@ -1,0 +1,24 @@
+{
+  "name": "vanilla-extract-esbuild",
+  "description": "Example repo for vanilla-extract compiling with esbuild",
+  "keywords": [
+    "vanilla-extract",
+    "css-in-js",
+    "css",
+    "esbuild"
+  ],
+  "template": "node",
+  "type": "module",
+  "version": "0.0.0",
+  "main": "src/index.ts",
+  "author": "SEEK",
+  "scripts": {
+    "start": "node ./start"
+  },
+  "private": true,
+  "dependencies": {
+    "@vanilla-extract/css": "0.4.0",
+    "@vanilla-extract/esbuild-plugin": "^0.2.0",
+    "esbuild": "^0.11.16"
+  }
+}
